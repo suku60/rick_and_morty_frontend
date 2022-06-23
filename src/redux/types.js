@@ -1,1 +1,1 @@
-export const LOBBYLOG = 'lobbylog';
+export const CHARLOG = 'charlog';

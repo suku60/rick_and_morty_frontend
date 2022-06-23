@@ -1,4 +1,4 @@
-.box_form {
+.box_card {
     background-color: var(--color-2-transparent);
     background-size: contain;
     background-position: center;
@@ -14,13 +14,9 @@
     transition: .3s;
 
     border-radius: 4rem;
-
-
-
 }
 
-.box_form:hover {
-    
+.box_card:hover {
     height: 95%;
     width: 95%;
 
@@ -30,29 +26,29 @@
     transition: .3s;
 }
 
-.form_grid {
+.card_grid {
     display: grid;
     grid-template-columns: 20% 1fr 1fr auto 5%;
     grid-template-rows: 5% 1fr 1fr auto 5%;
 }
 
-.form_grid:hover {
+.card_grid:hover {
     grid-template-columns: 5% 1fr 1fr auto 5%;
 
 }
 
 .character_info {
     display: grid;
-    align-items: center;
-    justify-items: center;
-    
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    
+    justify-items: center;
+    align-items: center;
 
     height: 100%;
     width: 100%;
+
     font-size: 2rem;
-    /* color: blue; */
 }
 
 .character_text {
@@ -68,17 +64,16 @@
 
 
 @media screen and (max-width: 1200px) {
-    .box_form {
+
+    .box_card {
         background-size: cover;
         background-position: center;
     }
-    .form_grid:hover {
+
+    .card_grid:hover {
         grid-template-columns: 4% 1fr 1fr auto 5%;
     
     }
-}
-
-@media screen and (max-width: 600px) {
 }
 
 

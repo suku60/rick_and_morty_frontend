@@ -1,10 +1,10 @@
 
 import {combineReducers} from 'redux';
 
-import lobby from './lobbyData-reducer';
+import character from './characterData-reducer';
 
 const rootReducer = combineReducers({
-    lobby,
+    character,
 });
 
 export default rootReducer;

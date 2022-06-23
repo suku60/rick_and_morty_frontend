@@ -1,66 +1,56 @@
 import React, {useEffect, useState} from 'react';
-import './Form.css';
+import './Card.css';
 
 import { connect } from "react-redux";
 
-const Form = (props) => {
+const Card = (props) => {
 
-  console.log("props", props.lobby?.lobbyData?.name)
-  console.log("props", props.lobby?.lobbyData)
-
-  let bgImage = props.lobby?.lobbyData?.image
+  let bgImage = props?.character?.characterData?.image
 
   const [formDisplay, setFormDisplay] = useState("none");
 
   const [characterStatus, setCharacterStatus] = useState(null)
 
-  const [animation, setAnimation] = useState("animFadeIn");
   useEffect(() => {
 
   },[]);
 
   useEffect(() => {
-      setFormDisplay(props.displayFromParent);
-
-      if(props.lobby.lobbyData.status === "Dead"){
-        setCharacterStatus("red")
-      }else{
-        setCharacterStatus(null)
-      }
+    setFormDisplay(props?.displayFromParent);
+    
+    if(props?.character?.characterData?.status === "Dead"){
+      setCharacterStatus("red")
+    }else{
+      setCharacterStatus(null)
+    }
 
   },[props?.displayFromParent]);
 
   return (
-    <div className='box_form centered_content' 
+    <div className='box_card centered_content' 
     style={{display: formDisplay, backgroundImage:`url(${bgImage})`}}
     onMouseLeave={()=>{setFormDisplay("none")}}
     >
       <div className="character_info">
         <p className="character_text character_name">
-        name: {props?.lobby?.lobbyData?.name}
+        name: {props?.character?.characterData?.name}
         </p>
-        {/* <br/> */}
         <p className="character_text character_status"
         style={{backgroundColor:characterStatus}}>
-        status: {props?.lobby?.lobbyData?.status}
+        status: {props?.character?.characterData?.status}
         </p>
-        {/* <br/> */}
         <p className="character_text character_species">
-        species: {props?.lobby?.lobbyData?.species}
+        species: {props?.character?.characterData?.species}
         </p>
-        {/* <br/> */}
         <p className="character_text character_location">
-        location: {props?.lobby?.lobbyData?.location?.name}
+        location: {props?.character?.characterData?.location?.name}
         </p>
-
-
       </div>
-
     </div>
   )
  
 }
 
 export default connect((state) => ({
-  lobby: state.lobby
-}))(Form);
+  character: state.character
+}))(Card);

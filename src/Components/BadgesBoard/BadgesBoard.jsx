@@ -2,14 +2,14 @@ import React, {useEffect, useState} from 'react';
 import { TransitionGroup, CSSTransition,  } from 'react-transition-group';
 
 import { connect } from "react-redux";
-import { LOBBYLOG} from "../../redux/types";
+import { CHARLOG} from "../../redux/types";
 
-import Circle from '../Circle/Circle';
+import Badge from '../Badge/Badge';
 import axios from 'axios';
-import './CircleBoard.css';
-import Form from '../Form/Form';
+import './BadgesBoard.css';
+import Card from '../Card/Card';
 
-const CircleBoard = (props) => {
+const BadgesBoard = (props) => {
 
     let apiUrl = "https://rickandmortyapi.com/api/character/";
     let maxBadges = 24;
@@ -62,17 +62,10 @@ const CircleBoard = (props) => {
 
     }
 
-    const showInfo = (data) => {
-
-        console.log(data.data)
-        setIsFormDisplay(true)
-
-    }
-
     // THIS DOESN'T MAKE SENSE BUT WORKS PERFECTLY FINE
     const showForm = (data) => {
 
-        props.dispatch({ type: LOBBYLOG, payload: data });
+        props.dispatch({ type: CHARLOG, payload: data });
 
         if (!isFormDisplay) {
           setSelectedChar(data)
@@ -83,12 +76,12 @@ const CircleBoard = (props) => {
       }
 
     return (
-       <div className='full_container box_circle_badges box_grid'>
+       <div className='full_container box_badges box_grid'>
          {
              badges?.map((character, index) => {
                  let data = character;
                  return <div className="box_circle" onClick={()=>{showForm(data)}} key={index}>
-                   <Circle
+                   <Badge
                    key={index}
                    id={index}
                    data={character}
@@ -97,11 +90,11 @@ const CircleBoard = (props) => {
              })
          }
          <button className="button_container centered_content box_circle" onClick={()=>refreshContent()}>REROLL</button>
-         <Form displayFromParent={isFormDisplay}/>
+         <Card displayFromParent={isFormDisplay}/>
        </div>
        )
 }
 
 export default connect((state) => ({
-    lobby: state.lobby
-  }))(CircleBoard);
+    character: state.character
+  }))(BadgesBoard);
