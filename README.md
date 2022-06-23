@@ -1,4 +1,6 @@
-## RICK AND MORTY CHARACTER STATUS WIKI
+## RICK AND MORTY CHARACTER STATUS WIKI V.1.0.
+
+###### Deployed on AWS: <a>https://master.d1ccev8u2cmvlp.amplifyapp.com/</a>
 
 ##### Description: 
 A small frontend reading from Rick and Morty's api. On the frontpage, user gets 24 random characters which can be selected to get more data. 
