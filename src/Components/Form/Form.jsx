@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import './Form.css';
 
 import { connect } from "react-redux";
-import { LOBBYLOG} from "../../redux/types";
 
 const Form = (props) => {
 

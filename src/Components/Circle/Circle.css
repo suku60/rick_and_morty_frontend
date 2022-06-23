@@ -1,16 +1,12 @@
 img{
     max-height: 100%;
 }
+
 .box_circle {
-    
-    /* background-color: blue; */
-
-
     max-height: 100%;
-    max-width: 100%;
+    min-width: 50%;
 
     margin: .1rem;
-    min-width: 50%;
 
     border-radius: 4rem;
 
@@ -19,27 +15,24 @@ img{
     transition: .2s;
 
     display: flex;
-
 }
 
 .img_container {
-
     background-size: cover;
     background-position: 0em 35%;
     background-repeat: no-repeat;
-
-    position: relative;
-    z-index: 3;
     
+    position: relative;
+    z-index: 3; 
 }
 
 .img_container:hover {
+    background-color: var(--color-4);
+    
     opacity: .7;
     mix-blend-mode:darken;
+    
     cursor: pointer;
-
-    background-color: var(--color-4);
-
 }
 
 .char_name {
@@ -57,18 +50,12 @@ img{
 
 @media screen and (max-width: 1200px) {
     .box_circle {
-    
-    
         border-radius: 10rem;
-    
     }
 }
 
 @media screen and (max-width: 600px) {
-    .box_circle {
-    
-    
-        border-radius: 4rem;
-    
+    .box_circle {  
+        border-radius: 4rem;  
     }
 }

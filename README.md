@@ -1,2 +1,1 @@
-- HOTKEY: create .centered_content
-- HOTKEY: useEffect basic
+## RICK AND MORTY CHARACTER STATUS WIKI

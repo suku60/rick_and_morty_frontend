@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@1,800&display=swap');
 
+/* GLOBAL CLASS */
 * {
   margin: 0%;
   padding: 0%;
@@ -12,13 +13,23 @@
 
 }
 
+/* ROOTING MAIN COLORS */
 :root {
 
+  --color-1-transparent: hsl(17, 40%, 19%, .9);
   --color-1: #44281d; 	
+
+	--color-2-transparent: hsl(20, 63%, 71%, .9); 	
 	--color-2: #e4a788; 	
-	--color-3: #f0e14a; 	
-	--color-4: #97ce4c; 	
-	--color-5: #e89ac7;
+	
+  --color-3-transparent: hsl(55, 85%, 62%, .9); 	
+  --color-3: #f0e14a; 	
+	
+  --color-4-transparent: hsl(85, 57%, 55%, .9); 	
+  --color-4: #97ce4c; 	
+	
+  --color-5-transparent: hsl(325, 63%, 76%, .9);
+  --color-5: #e89ac7;
   
 }
 
