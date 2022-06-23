@@ -6,9 +6,10 @@ img{
     /* background-color: blue; */
 
 
-    max-height: 95%;
-    max-width: 98%;
+    max-height: 100%;
+    max-width: 100%;
 
+    margin: .1rem;
     min-width: 50%;
 
     border-radius: 4rem;
@@ -16,6 +17,8 @@ img{
     overflow: hidden;
 
     transition: .2s;
+
+    display: flex;
 
 }
 
@@ -40,7 +43,7 @@ img{
 }
 
 .char_name {
-    font-size: 2rem;
+    font-size: 1.4rem;
     letter-spacing: .05rem;
     word-wrap: break-word;
 

@@ -9,7 +9,7 @@ import axios from 'axios';
 import './CircleBoard.css';
 import Form from '../Form/Form';
 
-const CircleBoard = () => {
+const CircleBoard = (props) => {
 
     let apiUrl = "https://rickandmortyapi.com/api/character/";
 
@@ -33,6 +33,9 @@ const CircleBoard = () => {
     },[])
 
     useEffect(()=>{
+        if(board.length < maxCircles){
+            refreshContent()
+        }
 
     },[board])
 
@@ -79,6 +82,8 @@ const CircleBoard = () => {
     // THIS DOESN'T MAKE SENSE BUT WORKS PERFECTLY FINE
     const showForm = (data) => {
 
+        props.dispatch({ type: LOBBYLOG, payload: data });
+
         console.log(data)
         if (!isFormDisplay) {
           // console.log("noformstate")
@@ -106,8 +111,8 @@ const CircleBoard = () => {
                 </div>
             })
         }
-        <button className="button_container centered_content box_circle" onClick={()=>refreshContent()}>refresh</button>
-        <Form displayFromParent={isFormDisplay} info={selectedChar}/>
+        <button className="button_container centered_content box_circle" onClick={()=>refreshContent()}>REROLL</button>
+        <Form displayFromParent={isFormDisplay}/>
 
        </div>
        )

@@ -1,6 +1,7 @@
 .box_circle_board {
     
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    padding: 1rem;
 }
 
 .box_grid {
@@ -16,26 +17,6 @@
 
 button {
     cursor: pointer;
+    font-size: 1.6rem;
 }
-
-/* ANIMATIONS */
-
-.remove-btn {
-    margin-right: 0.5rem;
-  }
-  
-  .item-enter {
-    opacity: 0;
-  }
-  .item-enter-active {
-    opacity: 1;
-    transition: opacity 2500ms ease-in;
-  }
-  .item-exit {
-    opacity: 1;
-  }
-  .item-exit-active {
-    opacity: 0;
-    transition: opacity 2500ms ease-in;
-  }
   
