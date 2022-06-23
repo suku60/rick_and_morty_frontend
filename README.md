@@ -15,7 +15,7 @@ This website can be a good choice for those Rick and Morty fans who want to expl
 ##### Time taken:
 - ~2 hours.
 
-<div style={display:flex}>
-<img src="/campo_de_pruebas/src/assets/frontpage.png">
-<img src="/campo_de_pruebas/src/assets/cardView.png">
-</div>
+
+![Frontpage](https://user-images.githubusercontent.com/96541489/175376375-8fc04ed8-784b-413d-86a3-d9747374f619.png)
+
+![Single Card View](https://user-images.githubusercontent.com/96541489/175376365-9862dc13-9ffb-4afe-9677-91e9ca39cafd.png)
