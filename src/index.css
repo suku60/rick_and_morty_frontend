@@ -6,6 +6,17 @@
 
 }
 
+:root {
+
+  --color-1: #44281d; 	
+	--color-2: #e4a788; 	
+	--color-3: #f0e14a; 	
+	--color-4: #97ce4c; 	
+	--color-5: #e89ac7;
+  
+}
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -34,13 +45,13 @@ code {
 
 /* SIZING */
 .full_screen {
-  
+
   height: 100vh;
   width: 100vw;
 }
 
 .full_container {
-  
+
   height: 100%;
   width: 100%;
 }

@@ -1,0 +1,67 @@
+.box_form {
+    background-color: red;
+
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 5;
+
+    height: 85%;
+    width: 20rem;
+    transition: .3s;
+
+    border-radius: 5rem;
+}
+
+.box_form:hover {
+    width: 80%;
+    transition: .3s;
+}
+
+.form_grid {
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr auto 5%;
+    grid-template-rows: 5% 1fr 1fr auto 5%;
+}
+
+.form_grid:hover {
+    grid-template-columns: 5% 1fr 1fr auto 5%;
+
+
+}
+
+.button {
+    border-radius: 5rem 0rem 0rem 0rem;
+    background-color: black;
+    color: red;
+    transition: .1s;
+}
+.button:hover {
+    background-color: gray;
+    color: black;
+    transition: .1s;
+}
+
+@media screen and (max-width: 1200px) {
+    .box_form {
+        width: 10rem;
+
+    }
+    .form_grid:hover {
+        grid-template-columns: 4% 1fr 1fr auto 5%;
+    
+    
+    }
+
+    .button {
+        border-radius: 5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .button {
+        border-radius: 5rem;
+    }
+}
+
+
